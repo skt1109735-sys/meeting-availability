@@ -68,13 +68,7 @@ document.addEventListener('DOMContentLoaded', () => {
     submitBtn.textContent = '생성 중...';
 
     try {
-      const res = await fetch('/api/create-meeting', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ title, location, invitees, slots }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || '회의 생성에 실패했습니다.');
+      const data = await window.postJson('/api/create-meeting', { title, location, invitees, slots });
 
       const meetingUrl = `${window.location.origin}/meeting.html?id=${data.id}`;
       document.getElementById('share-link').value = meetingUrl;

@@ -92,13 +92,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     submitBtn.textContent = '제출 중...';
 
     try {
-      const res = await fetch('/api/submit-response', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ meetingId: id, name, availability }),
-      });
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || '제출에 실패했습니다.');
+      const data = await window.postJson('/api/submit-response', { meetingId: id, name, availability });
 
       successMsg.classList.remove('hidden');
       renderSummary(data.meeting);
