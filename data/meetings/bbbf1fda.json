@@ -19,5 +19,14 @@
     "김윤성",
     "여두현"
   ],
-  "responses": []
+  "responses": [
+    {
+      "name": "주재한",
+      "submittedAt": "2026-07-14T08:29:00.130Z",
+      "availability": {
+        "2026-07-15T18:28": true,
+        "2026-07-23T09:28": false
+      }
+    }
+  ]
 }
