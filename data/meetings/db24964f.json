@@ -10,5 +10,13 @@
     }
   ],
   "invitees": [],
-  "responses": []
+  "responses": [
+    {
+      "name": "테스트참석자",
+      "submittedAt": "2026-07-14T08:26:21.667Z",
+      "availability": {
+        "2026-08-05T15:00": true
+      }
+    }
+  ]
 }
