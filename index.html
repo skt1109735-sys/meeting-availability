@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>회의 아카이브</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <header class="archive-header">
+      <h1>회의 아카이브</h1>
+      <a href="create.html" class="button-link">+ 새 회의 만들기</a>
+    </header>
+    <p class="muted">지금까지 생성된 모든 회의와 응답 현황입니다.</p>
+
+    <div id="loading">불러오는 중...</div>
+    <div id="empty" class="hidden muted">아직 생성된 회의가 없습니다.</div>
+
+    <ul id="meeting-list" class="meeting-list"></ul>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/github-fetch.js"></script>
+  <script src="js/archive.js"></script>
+</body>
+</html>

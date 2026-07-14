@@ -1,0 +1,9 @@
+{
+  "name": "meeting-availability",
+  "version": "1.0.0",
+  "private": true,
+  "description": "회의 가능 여부 확인 웹앱 - GitHub를 데이터 저장소 겸 공개 아카이브로 사용",
+  "engines": {
+    "node": ">=18"
+  }
+}

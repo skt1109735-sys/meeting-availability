@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>회의 참석 가능 여부</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <main class="container">
+    <div id="loading">불러오는 중...</div>
+    <div id="not-found" class="hidden">
+      <p>존재하지 않는 회의입니다.</p>
+    </div>
+
+    <div id="meeting-view" class="hidden">
+      <h1 id="meeting-title"></h1>
+      <p id="meeting-location" class="muted"></p>
+
+      <form id="response-form">
+        <label>
+          이름
+          <input type="text" id="respondent-name" required placeholder="본인 이름" />
+        </label>
+
+        <fieldset>
+          <legend>가능한 일시에 체크하세요</legend>
+          <div id="slot-checks"></div>
+        </fieldset>
+
+        <button type="submit" id="submit-btn">제출</button>
+      </form>
+
+      <p id="error-msg" class="error hidden"></p>
+      <p id="success-msg" class="success hidden">응답이 저장되었습니다.</p>
+
+      <section id="summary-section" class="hidden">
+        <h2>현재까지 응답 현황</h2>
+        <div class="table-scroll">
+          <table id="summary-table"></table>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="js/config.js"></script>
+  <script src="js/github-fetch.js"></script>
+  <script src="js/meeting.js"></script>
+</body>
+</html>

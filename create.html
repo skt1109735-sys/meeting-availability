@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>새 회의 만들기</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a href="index.html">← 아카이브로</a>
+  </header>
+
+  <main class="container">
+    <h1>새 회의 만들기</h1>
+
+    <form id="create-form">
+      <label>
+        회의명
+        <input type="text" id="title" required placeholder="예: 7월 정기 회의" />
+      </label>
+
+      <label>
+        장소
+        <input type="text" id="location" placeholder="예: 3층 회의실 (선택)" />
+      </label>
+
+      <label>
+        참석자 (콤마로 구분, 선택 사항)
+        <input type="text" id="invitees" placeholder="예: 김철수, 이영희" />
+      </label>
+
+      <fieldset>
+        <legend>후보 일시</legend>
+        <div id="slot-list"></div>
+        <button type="button" id="add-slot">+ 후보 일시 추가</button>
+      </fieldset>
+
+      <button type="submit" id="submit-btn">회의 만들기</button>
+    </form>
+
+    <div id="result" class="hidden">
+      <h2>회의가 생성되었습니다</h2>
+      <p>아래 링크를 참석자에게 공유하세요.</p>
+      <div class="share-row">
+        <input type="text" id="share-link" readonly />
+        <button type="button" id="copy-btn">복사</button>
+      </div>
+      <p><a id="view-link" href="#">회의 페이지 바로가기</a></p>
+    </div>
+
+    <p id="error-msg" class="error hidden"></p>
+  </main>
+
+  <script src="js/create.js"></script>
+</body>
+</html>
