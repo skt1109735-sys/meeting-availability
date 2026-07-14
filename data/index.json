@@ -1,14 +1,6 @@
 {
   "meetings": [
     {
-      "id": "db24964f",
-      "title": "Vercel 실동작 검증 회의",
-      "location": "온라인",
-      "createdAt": "2026-07-14T08:25:48.782Z",
-      "slotCount": 1,
-      "responseCount": 1
-    },
-    {
       "id": "demo0001",
       "title": "7월 정기 회의 (샘플)",
       "location": "3층 회의실",
