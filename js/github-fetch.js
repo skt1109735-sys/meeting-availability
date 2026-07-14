@@ -11,6 +11,13 @@ async function fetchData(path) {
   const res = await fetch(rawUrl(path), { cache: 'no-store' });
   if (res.status === 404) return null;
   if (!res.ok) throw new Error(`데이터를 불러오지 못했습니다: ${path} (${res.status})`);
+
+  const contentType = res.headers.get('content-type') || '';
+  if (!contentType.includes('application/json') && !contentType.includes('text/plain')) {
+    throw new Error(
+      `데이터를 불러오지 못했습니다: ${path} — 예상치 못한 응답 형식입니다 (네트워크 프록시나 캐시 문제일 수 있어요).`
+    );
+  }
   return res.json();
 }
 
