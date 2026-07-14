@@ -1,6 +1,14 @@
 {
   "meetings": [
     {
+      "id": "bbbf1fda",
+      "title": "팀 회의",
+      "location": "3층 회의실",
+      "createdAt": "2026-07-14T08:28:20.826Z",
+      "slotCount": 2,
+      "responseCount": 0
+    },
+    {
       "id": "demo0001",
       "title": "7월 정기 회의 (샘플)",
       "location": "3층 회의실",
